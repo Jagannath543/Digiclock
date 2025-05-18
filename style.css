@@ -1,0 +1,161 @@
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Orbitron', sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(45deg, #1a1a2e, #16213e);
+  color: #fff;
+  transition: background 0.3s, color 0.3s;
+}
+
+/* Clock Container */
+.clock-container {
+  text-align: center;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  width: 100%;
+  max-width: 400px;
+  background: rgba(255, 255, 255, 0.2); /* Transparent background for container */
+  transition: background 0.3s, color 0.3s;
+}
+
+/* Clock Display */
+.clock {
+  font-size: 5rem; /* Larger font for more impact */
+  margin-bottom: 10px;
+  color: #e0e0e0;
+  letter-spacing: 3px;
+}
+
+.date {
+  font-size: 1.3rem;
+  color: #4eb8dd;
+  letter-spacing: 1px;
+}
+
+/* Button Styles */
+button {
+  padding: 12px 20px;
+  margin-top: 25px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  background-color: #ff6600;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+/* Button Hover Effect */
+button:hover {
+  background-color: #ff7733;
+  transform: scale(1.05);
+}
+
+button:focus {
+  outline: none;
+}
+
+/* Dark Mode for Clock Box */
+body.dark-mode .clock-container {
+  background: rgba(0, 0, 0, 0.8); /* Dark background for clock container */
+  color: #fff; /* Text color to white in dark mode */
+}
+
+body.dark-mode .clock {
+  color: #f1f1f1; /* Lighter clock text for contrast */
+}
+
+body.dark-mode .date {
+  color: #aad8e6; /* Lighter color for the date in dark mode */
+}
+
+body.dark-mode button {
+  background-color: #444; /* Darker button background */
+}
+
+body.dark-mode button:hover {
+  background-color: #555; /* Slightly lighter on hover */
+}
+
+/* Responsive Styles */
+
+/* For small screens like smartphones (max-width: 480px) */
+@media (max-width: 480px) {
+  body {
+    background: linear-gradient(45deg, #1a1a2e, #16213e); /* Keep gradient for smaller screens */
+  }
+
+  .clock-container {
+    max-width: 90%; /* Make the clock container take up more space on small screens */
+    padding: 15px;
+  }
+
+  .clock {
+    font-size: 3rem; /* Reduce clock font size */
+  }
+
+  .date {
+    font-size: 1rem; /* Smaller date text */
+  }
+
+  button {
+    font-size: 0.9rem; /* Slightly smaller button font */
+    padding: 10px 18px;
+  }
+}
+
+/* For medium screens like tablets (max-width: 768px) */
+@media (max-width: 768px) {
+  .clock-container {
+    max-width: 80%; /* Adjust width for tablets */
+    padding: 18px;
+  }
+
+  .clock {
+    font-size: 4rem; /* Adjust clock font size */
+  }
+
+  .date {
+    font-size: 1.1rem; /* Slightly smaller date text */
+  }
+
+  button {
+    font-size: 1rem; /* Adjust button font size */
+    padding: 12px 20px;
+  }
+}
+
+/* For large screens (above 768px, default styling will apply) */
+@media (min-width: 768px) {
+  .clock-container {
+    max-width: 400px; /* Set max-width to 400px */
+    padding: 20px;
+  }
+
+  .clock {
+    font-size: 5rem; /* Original font size for large screens */
+  }
+
+  .date {
+    font-size: 1.3rem; /* Original date font size */
+  }
+
+  button {
+    font-size: 1.1rem; /* Original button font size */
+    padding: 12px 20px;
+  }
+}
